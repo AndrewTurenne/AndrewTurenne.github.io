@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Notes</title>
+</head>
+<body>
+  <h1>HTML notes</h1>
+  <br>
+  <br>
+  <div id="text">
+    <h2>"h (headline) tag"</h2>
+    <h1>h1 (really big)</h1>
+    <h2>h2 (big)</h2>
+    <h3>h3 (not that big)</h3>
+    <h4>h4 (almost small)</h4>
+    <h5>h5 (small)</h5>
+    <h6>h6 (really small)</h6>
+  <br>
+  <br>
+    <h2>"p (paragraph) tag"</h2>
+    <p>the content of a "p" tag will be displayed as a block of plain text</p>
+    <h3>What's the difference between "p" and "h"?</h3>
+    <p>In short, the only distinct difference between a small "h" tag and a "p" tag is that the content of an "h" tag is bolded. The content of a "p" tag is not. That said, best practice is to use "h" tags to show the hierarchy of a web page.</p>
+  <br>
+  <br>
+    <h2>Styling text</h2>
+    <h3>"em tag"</h3>
+    <p>the "em" tag will generally render as <em>italic</em> emphasis</p>
+    <h3>"strong tag"</h3>
+    <p>the "strong" tag will generally render as <strong>bold</strong> emphasis</p>
+  <br>
+  <br>
+    <h2>Line Breaks</h2>
+    <p>Line breaks are done using the "br" tag.<br>Unlike most other tags, "br" does not need an end tag, only a starting tag.</p>
+  <br>
+  <br>
+    <p>The "hr" tag creates a break which visually adds a horizontal line. </p>
+  <hr>
+    <h2>Lists</h2>
+    <h3>Unordered Lists</h3>
+    <p><strong>Unordered lists</strong> are lists shown using bullet points. To make them you must use the "ul" tag.<br>
+to add content to those lists you must use an "li" tag for each individual item on the list<p>
+    <h4>Example</h4>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <h3>Ordered Lists</h3>
+    <p><strong>Ordered lists</strong> are essentially the same as unordered lists, except instead of bullet points, they use numbers.<br>
+They are made using the "ol" tag.</p>
+    <h4>Example</h4>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+  </div>
+  <div id="media">
+    <h2>Images</h2>
+    <p>images are inserted with the "img" tag, this tag is a <strong>self-closing tag</strong> (does not need an end tag, but is still written with a forward slash at the end of the tag). <br>
+"Img" tags are written out with an attribute called "src" which is set to the source of the image.<br> 
+The "alt" attribute can also be added to an image to display text when the curser is held over an image which has failed to load (I'm still not fully sure how this one works).</p>
+    <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" alt="picture of a bear" />
+    <h2>Videos</h2>
+    <p>Videos are inserted with the "video" tag. This tag also uses the "src" attribute in the same way as images. It also has "width" and "height" attributes which set the size of the video displayed.<br>
+There is another attribute, "controls", which tells the browser to include basic controls on the video such as pause, play, and skip.<br><br>
+It is common practice to add the phrase "Video not supported" in between the opening and closing "video" tag, which will be displayed if the browser is unable to load the video.</p>
+    <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>
+    Video not supported
+    </video>
+  </div>
+  <div id="html doc standards">
+    <h2>HTML Document Standards</h2>
+    <p>In order to tell the browser what kind of document it is running, a <em>document type declaration</em> can be used. <br>
+For HTML5 (the current standard for HTML), a document type declaration is written out as "!DOCTYPE html". This must be written out at the beginning of all HTML documents.<br>
+In order to open an HTML file, the code should be saved with an <strong>.html</strong> extension.</p>
+<br>
+<br>
+    <p>Immediately following the document type declaration, an "html" tag should be used. This tag should also be used to end the document. This ensures that all code written will be interpreted as HTML code.</p>
+    <p>Following the "html" tag, a "head" tag should be used. This tag will contain the metadata for the web page (information about the page which isn't directly displayed).<br>
+To reiterate, the opening and closing "head tag" will appear in the code before the "body" tag.</p>
+    <h3>Metadata</h3>
+    <p>The "title" tag determines the title of the web page. This is the text that will be displayed at the top of the browser</p>
+    <h3>Links</h3>
+    <p>Hyperlinks are added using the "a"(anchor) tag and the "href" attribute. The "href" attribute appears in the opening "a" tag, and determines the URL.<br> 
+The text written in between the opening and closing "a" tags is the text that will be displayed (similarly to the "h" and "p" tags)</p>
+    <a href="https://www.wikipedia.org/">For example, this is a link to Wikipedia</a> 
+    <p>In order to have a link open in a new tab, the attribute "target="_blank"" can be used</p>
+    <a href="https://www.wikipedia.org/" target="_blank"> For example, clicking this will open Wikipedia in a new tab</a>
+    <p>When html files are stored in the same folder, the files can be linked together using the "a" tag. This is called a <em>relative path</em>.<br>
+To do this, enter a hyperlink as normal, except for the "href" value, instead of a full URL, place "./" followed by the file name</p>
+    <a href="./Example.html">For example, this link will open an example html file</a>
+    <p>An "a" tag can be used to link to a specific part of a page. This can be done by identifying the "href" value as a "#" followed by the ID of the appropriate "div" tag"
+    <h4>For Example</h4>
+    <ul>
+    <li><a href="#text">Text</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#html doc standards">HTML Document Standards</a></li>
+    <li><a href="#tables">Tables</a></li>
+    <li><a href="#forms">Forms</a></li>
+    </ul>
+    <p><strong>REMEMBER:hyperlinks don't have to just be text. They can also be other elements such as images by nesting an element tag inside of the "a" tag.</strong></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <p>To add comments to html code, use a tag that begins with "!--" and ends with "--". Anything in between these characters will be ignored by the browser.<br>
+There is an example of this in the html code file.</p>
+    <!-- This is the example comment -->
+  </div>
+  <div id="tables">
+    <h2>Tables</h2>
+    <p>Tables are made using a series of code which will be enclosed in the "table" tag.</p>
+    <h3>How to make a table in HTML</h3>
+    <ol>
+      <li>Make an opening and closing "table" tag</li>
+      <li>Add rows to the table using the "tr" tag</li>
+      <li>Add headings to the table using the "th" tag and the "scope" attribute.</li>
+      <li><em>Note: Column headings will often be enclosed in a "thead" tag, with data and row headings enclosed in a "tbody" tag, especially for longer tables.</em></li>
+      <li>Add the content of the table into the desired row using the "td" tag.</li>
+<br>
+<br>
+    <h4>Example Table</h4>
+    <table>
+      <tr>
+        <th scope="col">Company Name</th>
+        <th scope="col">Number of Items to Ship</th>
+        <th scope="col">Next Action</th>
+      </tr>
+      <tr>
+        <td>Adam's Greenworks</td>
+        <td>14</td>
+        <td>Package Items</td>
+      </tr>
+      <tr>
+        <td>Davie's Burgers</td>
+        <td>2</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Baker's Bike Shop</td>
+        <td>3</td>
+        <td>Send Invoice</td>
+      </tr>
+    </table>
+    <p>If needed, the "colspan" attribute can allow a piece of data to span over multiple columns</p>
+    <h4>Example</h4>
+    <table border="1">
+      <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+      </tr>
+      <tr>
+        <td colspan="2">Out of Town</td>
+        <td>Back in Town</td>
+      </tr>
+    </table>
+    <p>This same concept applies to rows using the "rowspan" attribute</p>
+    <h4>Example</h4>
+    <table border="1">
+      <tr> <!-- Row 1 -->
+        <th></th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </tr>
+      <tr> <!-- Row 2 -->
+        <th>Morning</th>
+        <td rowspan="2">Work</td>
+        <td rowspan="3">Relax</td>
+      </tr>
+      <tr> <!-- Row 3 -->
+        <th>Afternoon</th>
+      </tr>
+      <tr> <!-- Row 4 -->
+        <th>Evening</th>
+        <td>Dinner</td>
+      </tr>
+    </table>
+    <p><em>Note:In the above examples, the "border" attribute is used to make the table more legible.<br>
+Generally, elements such as "border" will not be used since most visual/stylistic coding is done using programming languages other than HTML (eg:CSS, etc.)</em></p>
+<br>
+<br>
+    <p>When displaying sums, differences, etc., a "tfoot" tag is often used.</p>
+    <h4>Example</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th>Revenue</th>
+          <th>Costs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Q1</th>
+          <td>$10M</td>
+          <td>$7.5M</td>
+        </tr>
+        <tr>
+          <th>Q2</th>
+          <td>$12M</td>
+          <td>$5M</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <td>$22M</td>
+          <td>$12.5M</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div id="forms">
+    <h2>Forms</h2>
+    <p>Forms can be used to collect and send information. Forms are used in polls, search queries, comments, and many other things.<br>
+If a text box is used, the "form" tag is often involved in some way.</p>
+<br>
+<br>
+    <p>To make a form, use the "form" tag. Inside the form tag, use the "action" attribute to determine where information is sent.<br>
+The "method" attribute is assigned an HTTP verb that is included in the HTTP request(eg:post, etc.)</p>
+    <p>To create an input field in the form, use the "input" tag. The input tag uses a variety of attribute to work as desired.<br>
+This includes the "type" attribute which determines what kind of input field is used, the "name" attribute, which is paired with the input when submitted (a "name" attribute is required for information to be sent),<br>
+and the "value" attribute which prefills the input field with a predetermined value.</p>
+    <p>To help users identify what a form input is for, use the "label" tag.<br>
+A label tag works similarly to any other text tag, but it is linked to the "input" tag using the "id" attribute(on the input) and the "for" attribute (on the label).</p>
+    <p> there is also a "step" attribute which adds an arrow to increase/decrease the value of the input by the value of the attribute. This is particularly useful for "number" fields.</p>
+    <h3>Types of "Type" </h3>
+    <ul>
+      <li><strong>"text"</strong> (a simple text field)</li>
+      <li><strong>"password"</strong> (a text field where all input is visually replaced with asterisks or dots)</li>
+      <li><strong>"number"</strong> (text field which restricts input to numbers)</li>
+      <li><strong>"range"</strong> (creates a slider. This type requires a "min" and "max" attribute (and often uses the "step" attribute) to be defined in the "input" tag.</li>
+      <li><strong>"checkbox"</strong> (creates a checkbox. To create a selection of multiple checkboxes, use a seperate "input" tag for each input, each with the same "name" attribute, but with seperate "label" tags and "value" attributes.</li>
+      <li><strong>"radio"</strong> (works the same as "checkbox", except they allow for only one option to be marked.</li>
+      <li><strong>"submit"</strong> (creates a button to submit the form. Use a "value" attribute to define the text displayed on the submit button.</li>
+    </ul>
+<br>
+<br>
+    <h3>Dropdown Lists</h3>
+    <p>To create a dropdown list in a form use the "select" tag. To add options to the list use the "option" tag.<br>
+These options are visually defined by the text in between the opening and closing tag. The information sent by the code is defined by the "value" attribute.</p>
+    <p>Another option is to use the "datalist" tag. This tag is used in conjunction with a "text" type input.<br>
+This creates a dropdown list that can be searched by typing in the text field. It also allows any text typed in the text field to be submitted as a response.</p>
+<br>
+<br>
+    <p>To create a larger text field, use the "textarea" tag. This, in conjuction with a "rows" and "cols" attribute will allow to make a text field of any desired size.<br>
+Default text can be placed in a "textarea" text field by writing the desired text in between the opening and closing tag.</p>
+
+
+    <h3>Example Table
+    <p>*This table includes most of the content discussed in this section</p>
+    <form action="submission.html" method="POST">
+      <h1>Create a burger!</h1>
+      <section class="protein">
+        <label for="patty">What type of protein would you like?</label>
+    	<input type="text" name="patty" id="patty">
+      </section>
+        <hr>
+      <section class="patties">
+        <label for="amount">How many patties would you like?</label>
+        <input type="number" name="amount" id="amount">
+      </section>
+        <hr>
+      <section class="cooked">
+        <label for="doneness">How do you want your patty cooked</label>
+        <br>
+        <span>Rare</span>
+        <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+        <span>Well-Done</span>
+      </section>
+        <hr>    
+      <section class="toppings">
+        <span>What toppings would you like?</span>
+        <br>
+        <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+        <label for="lettuce">Lettuce</label>
+        <input type="checkbox" name="topping" id="tomato" value="tomato">
+        <label for="tomato">Tomato</label>
+        <input type="checkbox" name="topping" id="onion" value="onion">
+        <label for="onion">Onion</label>
+      </section>
+        <hr>    
+      <section class="cheesy">
+        <span>Would you like to add cheese?</span>
+        <br>
+        <input type="radio" name="cheese" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="cheese" id="no" value="yes">
+        <label for="no">No</label>
+      </section>
+        <hr>  
+      <section class="bun-type">
+        <label for="bun">What type of bun would you like?</label>
+        <select name="bun" id="bun">
+          <option value="sesame">Sesame</option>
+          <option value="potatoe">Potato</option>
+          <option value="pretzel">Pretzel</option>
+        </select>
+      </section>
+        <hr>  
+      <section class="sauce-selection">
+        <label for="sauce">What type of sauce would you like?</label>
+        <input list="sauces" id="sauce" name="sauce">
+        <datalist id="sauces">
+          <option value="ketchup"></option>
+          <option value="mayo"></option>
+          <option value="mustard"></option>
+        </datalist>
+      </section>
+        <hr>
+      <section class="extra-info">
+        <label for="extra">Anything else you want to add?</label>
+        <br>
+        <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+      </section>
+        <hr>
+      <section class="submission">
+        <input type="submit" value="Submit">
+      </section>
+    </form>
+    <h2>Form Validation</h2>
+    <p>In forms, there are some restrictions or necessary inputs which can be enforced using a series a different attributes/tags.<br>
+This is a process called <em>validation.</em></p>
+    <h3>Types of Validation</h3>
+    <ul>
+    <li>Required fields - When a field on the form must be filled out you can add the "required" attribute.</li>
+    <li>Min/Max - Fairly self-explanatory, a minimum and maximum value for a field can be defined using the "min" and "max" attributes respectively</li>
+    <li># of characters - To define the number of characters that can be used in a field, use the "minlength" and "maxlength" attribute.</li>
+    <li>regualar expression<em>(regex)</em> - Some inputs have specific guidelines for their inputs. The "pattern" attribute can help enforce those guidelines.<br>
+The pattern attribute is defined by placing a selection of characters in brackets (ex: [0-9],[a-zA-Z0-9]) which defines which characters can be used. Followed by a value in curly brackets (ex:{5},{14,16},+) which defines the acceptable combinations of characters<br>
+For clarification, the "14,16" in the example above defines that any combination of allowed characters can be used between 14 and 16 times. The "+" defines that any combo can be used any number of times (however this does not override the limit defined by the "min" and "max" attributes.<br>
+Some examples of a defined "pattern" attribute include: "[a-z]+", "[0-9]{10}","[a-zA-z]{10,12}"</li>
+  </div>
+    
+
+</body>
+</html>
